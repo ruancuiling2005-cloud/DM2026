@@ -1,0 +1,27 @@
+# LAB02 - Grid and 8 Neighborhood
+
+## 程式碼
+grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+neighbors = []
+
+for dx in [-1, 0, 1]:
+    for dy in [-1, 0, 1]:
+        if dx == 0 and dy == 0:
+            continue
+
+        x = 1 + dx
+        y = 1 + dy
+
+        if 0 <= x < 3 and 0 <= y < 3:
+            neighbors.append(grid[x][y])
+
+print("中心:", grid[1][1])
+print("鄰居:", neighbors)
+
+## 學習心得
+這次練習讓我了解二維矩陣和八方向鄰居的概念。
